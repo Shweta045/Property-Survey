@@ -24,9 +24,20 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/all.min.css",
+              "src/assets/css/custom.css",
               "src/styles.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/jquery-3.5.1.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/jquery.easing.min.js",
+              "src/assets/js/custom.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "property"
+    }
+  },
+  "defaultProject": "property",
+  "cli": {
+    "analytics": "9d8b6e96-a7d3-4526-b576-2a647f98988e"
+  }
 }
