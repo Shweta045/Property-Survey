@@ -27,13 +27,13 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [ 
+            "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/css/all.min.css",
               "src/assets/css/custom.css",
               "src/styles.css"
             ],
-            "scripts": [  
+            "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/bootstrap.bundle.min.js",
@@ -133,5 +133,8 @@
       }
     }
   },
-  "defaultProject": "PropertySurvey"
+  "defaultProject": "PropertySurvey",
+  "cli": {
+    "analytics": "019d2992-9ba7-476d-862e-5a07bcf8661e"
+  }
 }

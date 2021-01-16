@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   signinForm:FormGroup;
   mobile:string = "";
+  api:string="http://localhost:8081";
   constructor(private frmbuilder:FormBuilder, private http:HttpClient ,private router: Router) { 
     this.signinForm = this.frmbuilder.group({
       mobile: new FormControl()
@@ -21,7 +22,23 @@ export class LoginComponent implements OnInit {
   signData(signinForm: any){ 
     this.mobile = signinForm.controls.mobile.value;
     const data = {mobile:this.mobile};
-    console.log(data);
+    this.http.get(this.api+"/Login",{params:data}).subscribe((result:any)=>{
+      let obj = JSON.stringify(result);
+      interface Obj{
+        status:number;
+        msg:string;
+        data:any;
+      }
+      let res:Obj = JSON.parse(obj);
+      if(res.status == 1){
+        let dataRes:any = JSON.stringify(res.data);
+        sessionStorage.setItem("api",this.api);
+        this.router.navigate(['/WardBlock']);
+        console.log(data);
+      }
+      
+    })
+   
   }
 
 }

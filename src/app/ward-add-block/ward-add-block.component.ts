@@ -64,7 +64,7 @@ export class WardAddBlockComponent implements OnInit {
       this.AddWardText = false;
     }
   }
-  AddWarbBlock(addWardBlock:any){
+  AddWardBlock(addWardBlock:any){
     this.district = addWardBlock.controls.district.value;
     this.city = addWardBlock.controls.city.value;
     this.ward = addWardBlock.controls.ward.value;
@@ -80,3 +80,5 @@ export class WardAddBlockComponent implements OnInit {
   }
 
 }
+
+
